@@ -17,3 +17,7 @@ IF SOME OF MODS GOT ERRORS/ETC YOU WILL GET TXT FILES, you can neither create is
 
 
 
+
+
+
+Created with Deepseek, call me idiot if you like, call me helpful genius if you like, i do it for myself, others, thanks for reading allofdat

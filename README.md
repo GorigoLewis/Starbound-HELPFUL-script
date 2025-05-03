@@ -2,7 +2,7 @@
 THIS SCRIPT WONT DELETE OLD MODS/FOLDERS (like fullbright or etc mods you got from forum/workshop which require manual installation)
 
 How to start?
-1. Download both files, put them in Starbound\win64 if you have notepad++ https://notepad-plus-plus.org/ (download it if you dont, its cool program) 
+1. Download both files, put them in Starbound\win64 or win34 (the folder where you have starbound.exe and starboundserver.exe if you have notepad++ https://notepad-plus-plus.org/ (download it if you dont, its cool program) 
 2. edit the SB_Server_EN.ps1 and specify your Starbound, Steam, starbound_server.exe location
 ![Imagin1](https://github.com/user-attachments/assets/cc02a75b-a4ea-4fd9-95be-b826100deb11)
 3. In Notepad++ find a ENCODING tab, and click it, set SB_Server_EN.ps1 ENCODING to UTF-8-BOM

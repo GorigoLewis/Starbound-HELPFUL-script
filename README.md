@@ -14,12 +14,9 @@ Pick 1 which you like, wait for mods installation, after this have fun because s
 
 
 IF SOME OF MODS GOT ERRORS/ETC YOU WILL GET TXT FILES, you can neither create issue requests or do as suggested in txt file (manually move the rest of files)
+
 ⠀
 ⠀
-⠀
-⠀
-⠀
-⠀⠀
 ⠀
 ⠀
 ⠀

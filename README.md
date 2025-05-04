@@ -7,7 +7,7 @@
 > Each 100 mods of manual installation take 30 minutes so for example 500 mods take couple hours, this script makes it so you can unpack/update mods in just couple minutes (depends on pc specs like hdd/ssd and amount of mods)
 
 
-### THIS SCRIPT WONT DELETE OLD MODS/FOLDERS (like fullbright or etc mods you got from forum/workshop which require manual installation)
+### THIS SCRIPT WONT DELETE OLD MODS/FOLDERS (like fullbright or etc mods you got from forum/workshop which require manual installation, so be happy this script is OP)
 
 ### How to start?
 1. Download both files, put them in Starbound\win64 or win34 (the folder where you have starbound.exe and starboundserver.exe if you have **[notepad++](https://notepad-plus-plus.org/)** (download it if you dont have, its cool program) 

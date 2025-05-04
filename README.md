@@ -10,14 +10,13 @@
 ### THIS SCRIPT WONT DELETE OLD MODS/FOLDERS (like fullbright or etc mods you got from forum/workshop which require manual installation, so be happy this script is OP)
 
 ### How to start?
-1. Download both files, put them in Starbound\win64 or win34 (the folder where you have starbound.exe and starboundserver.exe if you have **[notepad++](https://notepad-plus-plus.org/)** (download it if you dont have, its cool program) 
-2. edit the SB_Server_EN.ps1 and specify your Starbound, Steam, starbound_server.exe location
-![Imagin1](https://github.com/user-attachments/assets/cc02a75b-a4ea-4fd9-95be-b826100deb11)
-3. In Notepad++ find a ENCODING tab, and click it, set SB_Server_EN.ps1 ENCODING to UTF-8-BOM
-![image](https://github.com/user-attachments/assets/eae51861-b21d-4143-a7df-c59d549f4fa8)
-4. After specifying your folder locations, setting encoder you can launch Modding_Start.bat
-5. it will give you 3 options
-![image](https://github.com/user-attachments/assets/71dadead-3fc6-48c5-a9ca-eb1e514bd10e)
+1. Download both files, put them in Starbound\win64 or win34 (the folder where you have starbound.exe and starboundserver.exe)
+2. Open the SB_Manager_EN.ps1 and specify your Starbound, Steam, starbound_server.exe location
+![image](https://github.com/user-attachments/assets/e7774a01-99d6-45b3-895a-10bc44f98cc7)
+4. After specifying your folder locations, click any options you like
+5. it will give you 4 options
+![image](https://github.com/user-attachments/assets/0a27bb0b-9bba-4f97-974e-0c94aa207978)
+
 Pick 1 which you like, wait for mods installation, after this have fun because server is launching (if you dont need server just close it lol)
 
 

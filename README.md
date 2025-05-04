@@ -11,7 +11,7 @@
 
 ### How to start?
 1. Download both files, put them in Starbound\win64 or win34 (the folder where you have starbound.exe and starboundserver.exe)
-2. Open the SB_Manager_EN.ps1 and specify your Starbound, Steam, starbound_server.exe location
+2. Open the Starbound_Mod_Server_Manager.bat and specify your Starbound, Steam, starbound_server.exe location
 ![image](https://github.com/user-attachments/assets/e7774a01-99d6-45b3-895a-10bc44f98cc7)
 4. After specifying your folder locations, click any options you like
 5. it will give you 4 options

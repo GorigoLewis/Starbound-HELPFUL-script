@@ -12,7 +12,7 @@ $paths = @{
 function Show-Header {
     Clear-Host
     Write-Host "==============================================" -ForegroundColor Cyan
-    Write-Host " STARBOUND SERVER MANAGER v2.0 " -ForegroundColor White -BackgroundColor DarkMagenta
+    Write-Host " STARBOUND SERVER MANAGER v2.1 " -ForegroundColor White -BackgroundColor DarkMagenta
     Write-Host "==============================================" -ForegroundColor Cyan
     Write-Host ""
 }

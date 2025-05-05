@@ -70,10 +70,15 @@ function Process-Mods {
     $totalMods = 0
 
     try {
-        # Cleanup
-        if (Test-Path $paths.Mods) {
-            Get-ChildItem $paths.Mods | Remove-Item -Recurse -Force
-            Write-Host "[INFO] Cleared mods folder" -ForegroundColor DarkGray
+        # Deleting only Workshop-mods
+        $itemsToRemove = Get-ChildItem $paths.Mods | Where-Object {
+            $_.Name -match '^\d+$' -or    # Folders with ID
+            $_.Name -match '^\d+\.pak$'   # .pak files with ID
+        }
+        
+        if ($itemsToRemove) {
+            Write-Host "[INFO] Removing old Workshop mods..." -ForegroundColor DarkGray
+            $itemsToRemove | Remove-Item -Recurse -Force
         }
 
         # Get workshop mods
@@ -121,13 +126,13 @@ function Process-Mods {
             }
         }
 
-        # Generate report (ALWAYS)
+        # Generate report
         $reportContent = @"
 === MOD PROCESSING REPORT ===
 Generated: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
 
 [STATISTICS]
-Total Mods: $totalMods
+Total Workshop Mods: $totalMods
 Successfully processed: $processed
 Warnings: $($warnings.Count)
 Errors: $($errors.Count)
@@ -138,6 +143,8 @@ $($warnings -join "`n")
 [ERRORS]
 $($errors -join "`n")
 
+[NOTE] Custom mods (non-numeric names) were preserved
+
 [RECOMMENDATIONS]
 1. Verify Workshop subscriptions for missing mods
 2. Check mod compatibility
@@ -145,10 +152,6 @@ $($errors -join "`n")
 "@
         Set-Content $reportFile -Value $reportContent -Encoding UTF8
         Invoke-Item $reportFile
-Start-Sleep -Seconds 1
-if (-not (Test-Path $reportFile)) {
-    Write-Host "Report generation failed!" -ForegroundColor Red
-}
 
         return ($errors.Count -eq 0)
     }

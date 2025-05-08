@@ -12,7 +12,7 @@ $paths = @{
 function Show-Header {
     Clear-Host
     Write-Host "==============================================" -ForegroundColor Cyan
-    Write-Host " STARBOUND SERVER MANAGER v2.1 " -ForegroundColor White -BackgroundColor DarkMagenta
+    Write-Host " STARBOUND SERVER MANAGER v2.2 " -ForegroundColor White -BackgroundColor DarkMagenta
     Write-Host "==============================================" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -116,13 +116,22 @@ function Process-Mods {
                         $customFiles | Copy-Item -Destination $destFolder -Force
                         $processed++
                     }
+                    elseif (@(Get-ChildItem $folder.FullName -File -Filter *.patch).Count -gt 0 -or 
+                           @(Get-ChildItem $folder.FullName -Directory).Count -gt 0) {
+                        $destFolder = Join-Path $paths.Mods $modId
+                        New-Item $destFolder -ItemType Directory -Force | Out-Null
+                        Copy-Item -Path "$($folder.FullName)\*" -Destination $destFolder -Recurse -Force
+                        $processed++
+                    }
                     else {
                         $warnings += $modId
+                        Write-Host ("[WARNING] Mod {0} has no recognizable content structure" -f $modId) -ForegroundColor Yellow
                     }
                 }
             }
             catch {
                 $errors += $modId
+                Write-Host ("[ERROR] Failed to process mod {0}: {1}" -f $modId, $_) -ForegroundColor Red
             }
         }
 
@@ -156,18 +165,8 @@ $($errors -join "`n")
         return ($errors.Count -eq 0)
     }
     catch {
-        Write-Host "[FATAL] $_" -ForegroundColor Red
+        Write-Host "[FATAL] $($_)" -ForegroundColor Red
         return $false
-    }
-}
-
-function Start-Server {
-    try {
-        Write-Host "`n[STATUS] Starting Starbound server..." -ForegroundColor Cyan
-        Start-Process $paths.ServerExe -ArgumentList "-bootconfig sbinit.config" -NoNewWindow -Wait
-    }
-    catch {
-        Write-Host "[ERROR] Failed to start server: $_" -ForegroundColor Red
     }
 }
 
